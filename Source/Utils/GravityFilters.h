@@ -1,0 +1,62 @@
+#pragma once
+
+#include <JuceHeader.h>
+
+#include <cmath>
+#include <vector>
+#include <stdexcept>
+
+namespace gravity {
+    enum class FilterType
+    {
+        lowpass,
+        highpass,
+        allpass
+    };
+
+    class ButterFilter
+    {
+        FilterType filterType;
+
+        double coefficientA0, coefficientA1, coefficientA2, coefficientB1, coefficientB2;
+
+        double cutOffFrequency, qualityFactor;
+
+        double sampleRate;
+
+        std::vector<double> previousSamples1, previousSamples2;
+
+    public:
+        ButterFilter(double sampleRate, FilterType type);
+
+        void prepare(const juce::dsp::ProcessSpec& spec);
+
+        void setFilterParameters(double cutOffFrequency, double qualityFactor, FilterType filterType);
+
+        double processFilter(double inputSample, int channelNumber);
+
+        void updateSampleRate(double newSampleRate);
+
+        void process(const juce::dsp::ProcessContextReplacing<float>& context);
+    };
+
+    class LinkwitzRFilter
+    {
+        FilterType filterType;
+
+    public:
+        ButterFilter lowPassFilter, highPassFilter, allPassFilter;
+
+        LinkwitzRFilter(double sampleRate);
+
+        void prepare(const juce::dsp::ProcessSpec& spec);
+
+        void setCrossoverFrequency(double crossoverFrequency);
+
+        double processFilter(double inputSample, int channelNumber);
+
+        void setType(FilterType newType);
+
+        void process(const juce::dsp::ProcessContextReplacing<float>& context);
+    };
+}

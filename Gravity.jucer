@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="axNUrC" name="Gravity" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Ice Bear"
+              pluginAUMainType="'aufx'" pluginVST3Category="Fx,Stereo,Tools"
+              pluginAAXCategory="8192" pluginVSTCategory="kPlugCategEffect"
+              cppLanguageStandard="latest">
+  <MAINGROUP id="bamP07" name="Gravity">
+    <GROUP id="{7F8339DE-E064-6E19-3175-A63417A500C8}" name="Source">
+      <GROUP id="{999B611F-1475-FF19-A249-B06669F19AED}" name="Utils">
+        <FILE id="hJhQD9" name="GravityFilters.cpp" compile="1" resource="0"
+              file="Source/Utils/GravityFilters.cpp"/>
+        <FILE id="iSwWuU" name="GravityFilters.h" compile="0" resource="0"
+              file="Source/Utils/GravityFilters.h"/>
+      </GROUP>
+      <GROUP id="{DBB18339-2E6B-11EE-7849-ADFF3D3831F5}" name="Resources">
+        <FILE id="V51gau" name="BBHSansBartle.ttf" compile="0" resource="1"
+              file="Source/Resources/BBHSansBartle.ttf"/>
+        <FILE id="umNiEI" name="Gravity_Logo.svg" compile="0" resource="1"
+              file="Source/Resources/Gravity_Logo.svg"/>
+      </GROUP>
+      <GROUP id="{A0B01B7A-A2A8-65C6-408F-2F13EC13A6EE}" name="Components">
+        <FILE id="RXoNMT" name="GravityDBMeter.cpp" compile="1" resource="0"
+              file="Source/Components/GravityDBMeter.cpp"/>
+        <FILE id="wCh0O7" name="GravityDBMeter.h" compile="0" resource="0"
+              file="Source/Components/GravityDBMeter.h"/>
+        <FILE id="zSMzLQ" name="GravityEffectKnobsContainer.cpp" compile="1"
+              resource="0" file="Source/Components/GravityEffectKnobsContainer.cpp"/>
+        <FILE id="yYJLpu" name="GravityEffectKnobsContainer.h" compile="0"
+              resource="0" file="Source/Components/GravityEffectKnobsContainer.h"/>
+        <FILE id="IC8IEB" name="GravityHeader.cpp" compile="1" resource="0"
+              file="Source/Components/GravityHeader.cpp"/>
+        <FILE id="CPBzWl" name="GravityHeader.h" compile="0" resource="0" file="Source/Components/GravityHeader.h"/>
+        <FILE id="mrQYhq" name="GravitySlider.cpp" compile="1" resource="0"
+              file="Source/Components/GravitySlider.cpp"/>
+        <FILE id="FJo2X7" name="GravitySlider.h" compile="0" resource="0" file="Source/Components/GravitySlider.h"/>
+        <FILE id="dcp58B" name="GravityVisualContent.cpp" compile="1" resource="0"
+              file="Source/Components/GravityVisualContent.cpp"/>
+        <FILE id="NIBkQw" name="GravityVisualContent.h" compile="0" resource="0"
+              file="Source/Components/GravityVisualContent.h"/>
+      </GROUP>
+      <FILE id="VSOlXA" name="Colors.h" compile="0" resource="0" file="Source/Colors.h"/>
+      <FILE id="CI8CgP" name="GravityProcessor.cpp" compile="1" resource="0"
+            file="Source/GravityProcessor.cpp"/>
+      <FILE id="h6iTwG" name="GravityProcessor.h" compile="0" resource="0"
+            file="Source/GravityProcessor.h"/>
+      <FILE id="Ob522I" name="GravityEditor.cpp" compile="1" resource="0"
+            file="Source/GravityEditor.cpp"/>
+      <FILE id="r4ynwP" name="GravityEditor.h" compile="0" resource="0" file="Source/GravityEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2026 targetFolder="Builds/VisualStudio2026">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Gravity-Debug-x64" winArchitecture="x64"
+                       optimisation="3"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Gravity-Realease-x64"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../../../Downloads/juce-8.0.12-windows/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2026>
+  </EXPORTFORMATS>
+</JUCERPROJECT>
