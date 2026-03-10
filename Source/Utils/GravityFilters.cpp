@@ -1,3 +1,8 @@
+//
+//  Copyright © 2023 Oberon Day-West. All rights reserved.
+//  This code has been referenced and adapted from Bristow-Johnson (2005), neotec (2007), Falco (2009) and Zolzer (2011).
+//
+
 #include "GravityFilters.h"
 #include <numbers>
 
